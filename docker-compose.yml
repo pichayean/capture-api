@@ -4,7 +4,7 @@ services:
     build:
       context: . # Use the current directory as the build context
     ports:
-      - "8080:8080" # Map host port 8080 to container port 8080
+      - "8081:8081" # Map host port 8080 to container port 8080
     depends_on:
       - chrome-browser # Ensure the Chrome browser service is running
 
