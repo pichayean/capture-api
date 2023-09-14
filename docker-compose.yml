@@ -1,0 +1,15 @@
+version: "3"
+services:
+  gin-app:
+    build:
+      context: . # Use the current directory as the build context
+    ports:
+      - "8080:8080" # Map host port 8080 to container port 8080
+    depends_on:
+      - chrome-browser # Ensure the Chrome browser service is running
+
+  chrome-browser:
+    build:
+      context: ./chrome # Build the Chrome browser Dockerfile
+    ports:
+      - "9222:9222" # Map host port 9222 to container port 9222
